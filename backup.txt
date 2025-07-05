@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- Define o tipo de codificação de caracteres usada no documento -->
   <meta charset="UTF-8" />
+
+  <!-- Garante que a página será renderizada corretamente em dispositivos móveis -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Permite que mecanismos de busca indexem e sigam os links da página -->
   <meta name="robots" content="index,follow" />
 
+  <!-- Título da aba do navegador -->
   <title>Rica Games - as melhores piadas da internet</title>
-  <meta name="description" content="😂 Rir é o melhor remédio (e aqui a dose é diária)!
+
+  <!-- Descrição usada por buscadores (SEO) -->
+  <meta name="description" content="😂 Rir é o melhor remédio (e aqui a dose é diária)! 
   Bem-vindo à página onde a seriedade passa longe! Memes, piadas, situações do dia a dia e aquele humor ácido que faz chorar de rir. Se rir à toa é crime, aqui somos todos culpados. Segue e vem dar boas risadas com a gente!" />
+
+  <!-- Palavras-chave para SEO -->
   <meta name="keywords" content="piadas,engraçado,meme,zueira,zuandonanet,piadas,humor,muitapiada,vamosrir,Rica Games, jogos de corrida, destruição, Twisted Metal, jogos destrutivos, vídeos de jogos, ação, entretenimento" />
 
+  <!-- Estilos personalizados da página -->
   <style>
+    /* Define o estilo geral do corpo da página */
     body {
       margin: 0;
       background-color: #121212;
@@ -26,6 +38,7 @@
       background: linear-gradient(135deg, #0f0f0f, #2a2a2a);
     }
 
+    /* Estiliza o título principal */
     h1 {
       text-align: center;
       margin-bottom: 20px;
@@ -34,6 +47,7 @@
       font-size: 3em;
     }
 
+    /* Container que abriga o vídeo */
     #video-container {
       width: 100%;
       max-width: 800px;
@@ -46,6 +60,7 @@
       background-color: #000;
     }
 
+    /* Ajustes para vídeos/iframes */
     iframe, video {
       width: 100%;
       height: 100%;
@@ -53,6 +68,7 @@
       display: block;
     }
 
+    /* Título abaixo do vídeo */
     #video-title {
       max-width: 800px;
       text-align: center;
@@ -64,6 +80,7 @@
       min-height: 2.5em;
     }
 
+    /* Estilo do botão para trocar vídeo */
     button {
       background-color: #f0a500;
       border: none;
@@ -79,11 +96,13 @@
       font-family: 'Orbitron', sans-serif;
     }
 
+    /* Efeito hover no botão */
     button:hover {
       background-color: #c78c00;
       box-shadow: 0 0 25px #c78c00;
     }
 
+    /* Bloco com string aleatória exibida ao usuário */
     #unique-string {
       max-width: 90%;
       background-color: #222;
@@ -99,6 +118,7 @@
       box-shadow: inset 0 0 10px #d8a500;
     }
 
+    /* Estilo do botão de propaganda piscante */
     #propaganda-piscante {
       position: fixed;
       top: 20px;
@@ -117,11 +137,13 @@
       font-family: 'Orbitron', sans-serif;
     }
 
+    /* Animação de piscar do botão de propaganda */
     @keyframes piscar {
       0% {opacity: 1;}
       100% {opacity: 0.3;}
     }
 
+    /* Responsividade para dispositivos móveis */
     @media (max-width: 600px) {
       #video-container {
         max-width: 100%;
@@ -141,48 +163,65 @@
       }
     }
   </style>
+
+  <!-- Fonte importada do Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
 </head>
+
 <body>
 
+  <!-- Título principal da página -->
   <h1>humor sem fim! Rica Games</h1>
-<!----------------containerconteudo-->
+
+  <!-- Container onde será exibido o vídeo -->
   <div id="video-container"></div>
 
+  <!-- Título do vídeo sendo exibido -->
   <div id="video-title">Carregando vídeo...</div>
 
+  <!-- Botão para trocar o vídeo exibido -->
   <button onclick="trocarVideo()">Trocar Vídeo</button>
-<!----------------containerconteudo-->
+
+  <!-- String aleatória gerada e exibida aqui -->
   <div id="unique-string">Carregando conteúdo exclusivo...</div>
-<!------------propagandapiscante-->
+
+  <!-- Botão de propaganda que pisca e redireciona -->
   <div id="propaganda-piscante">OFERTA IMPERDÍVEL!</div>
-  <!------------propagandapiscante-->
 
+  <!-- Início do script que gerencia vídeos, propagandas e string única -->
   <script>
+    // Lista de vídeos disponíveis para exibição
     const videos = [
-
       {
         tipo: "youtube",
         src: "https://www.youtube.com/embed/ln_e_QKjV90",
         titulo: "TENTE NÃO RIR - VIDEOS ENGRAÇADOS E MEMES (canal: 100Tédio memes)"
       },
       {
-        
         tipo: "youtube",
         src: "https://www.youtube.com/embed/Sdt9KsqKQNA",
         titulo: "OS ERROS E ERROS MAIS ENGRAÇADOS DO FUTEBOl"
-
       },
-       {
-        
+      {
         tipo: "youtube",
         src: "https://www.youtube.com/embed/H6TKU833Tg0",
         titulo: "As habilidades mais loucas do futebol africano"
-
       }
     ];
 
+    // Lista de URLs para propagandas aleatórias
     const propagandas = [
+                "https://randomico02.vercel.app/",
+                "https://randomico02.netlify.app/",
+                "https://carro.wuaze.com/conferir/",
+                "https://arquivos.wuaze.com/conferir/",
+                "https://hostinger.com.br/?REFERRALCODE=1VICTOR444",
+                "https://geocredibnkvitoria.com/",
+                "https://jogosantigos472302513.wordpress.com/",
+                "https://brasilbrasileiross.blogspot.com/",
+                "https://ocomerciobrasileironoticia.blogspot.com/2025/05/erp-profissional-para-empresas.html",
+      // ... (demais URLs)
+                "https://dokehost.blogspot.com/",
                 "https://randomico02.vercel.app/",
                 "https://randomico02.netlify.app/",
                 "https://carro.wuaze.com/conferir/",
@@ -222,14 +261,17 @@
                 "https://dokehost.blogspot.com/"
     ];
 
+    // Seleciona um vídeo aleatório da lista
     function getRandomVideo() {
       return videos[Math.floor(Math.random() * videos.length)];
     }
 
+    // Seleciona uma propaganda aleatória
     function getRandomAdURL() {
       return propagandas[Math.floor(Math.random() * propagandas.length)];
     }
 
+    // Troca o vídeo exibido no container por outro aleatório
     function trocarVideo() {
       const videoData = getRandomVideo();
       const container = document.getElementById('video-container');
@@ -237,6 +279,7 @@
 
       let videoHTML = '';
 
+      // Verifica se é um vídeo do YouTube
       if (videoData.tipo === 'youtube') {
         videoHTML = `<iframe 
                       src="${videoData.src}" 
@@ -246,16 +289,19 @@
                       title="${videoData.titulo}">
                     </iframe>`;
       } else {
+        // Caso seja um vídeo local
         videoHTML = `<video controls preload="metadata" poster="${videoData.poster || ''}">
                       <source src="${videoData.src}" type="video/mp4" />
                       Seu navegador não suporta o elemento de vídeo.
                     </video>`;
       }
 
+      // Insere o HTML do vídeo no container e atualiza o título
       container.innerHTML = videoHTML;
       tituloEl.textContent = videoData.titulo;
     }
 
+    // Gera uma string aleatória (com caracteres variados)
     function gerarStringUnica(tamanho = 800) {
       const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?';
       let resultado = '';
@@ -265,12 +311,14 @@
       return resultado;
     }
 
+    // Quando a página carrega...
     document.addEventListener('DOMContentLoaded', () => {
-      trocarVideo(); // carrega o primeiro vídeo aleatório
-      document.getElementById('unique-string').textContent = gerarStringUnica();
+      trocarVideo(); // ...troca o vídeo automaticamente
+      document.getElementById('unique-string').textContent = gerarStringUnica(); // Gera conteúdo exclusivo
 
+      // Evento de clique na propaganda piscante
       document.getElementById('propaganda-piscante').addEventListener('click', () => {
-        window.open(getRandomAdURL(), '_blank');
+        window.open(getRandomAdURL(), '_blank'); // Abre propaganda em nova aba
       });
     });
   </script>
